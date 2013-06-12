@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLUseCaseDiagram1">
+  <useCaseModelRootMoniker Id="4d30c338-47d2-4a05-b65e-620fb6ab57d4" />
+  <nestedChildShapes>
+    <actorShape Id="3714c752-1b48-4b71-b950-859b3b0e22b3" absoluteBounds="1, 2.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="47071072-d8b2-494a-a7c1-0222b45c5908" LastKnownName="Helper" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="a2ccade8-f3e1-4bf5-8032-497818d2c140" absoluteBounds="3.25, 1.75, 1.5, 0.875" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="8565e298-c1d6-4f5e-ad3a-b3d5103456dd" LastKnownName="Instruct Partner by performing Hand Gestures in Shared Workspace" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.5 : 2.58522727272727); (3.2764271340717 : 2.30261386503405)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="6889aca6-5bb1-4b38-be1b-ae4580640290" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="3714c752-1b48-4b71-b950-859b3b0e22b3" />
+        <useCaseShapeMoniker Id="a2ccade8-f3e1-4bf5-8032-497818d2c140" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="a933da17-7d75-422f-890f-bd7b0b3ef5eb" absoluteBounds="3.25, 2.75, 1.5, 0.875" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="e239d37a-2d75-4e3c-9eeb-3307da3bd5fa" LastKnownName="Communicate Verbally with Partner" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseAssociationConnector edgePoints="[(1.5 : 2.67613636363636); (3.29224964943397 : 3.04273288283877)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="cdaa5457-ac07-4279-8d34-c6a0954a889f" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="3714c752-1b48-4b71-b950-859b3b0e22b3" />
+        <useCaseShapeMoniker Id="a933da17-7d75-422f-890f-bd7b0b3ef5eb" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseShape Id="6222e61a-679f-455f-a791-1882ba41d1f2" absoluteBounds="3.25, 3.75, 1.5, 0.875" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="7ad2db61-2d9f-4b45-bdcf-5a74bd7a0314" LastKnownName="Capture Worksite with Helmer Mounted Camera" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <actorShape Id="d9a04e42-65dc-4740-99b3-c7014254050d" absoluteBounds="1, 3.5, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="060967bb-c45b-422a-a061-db8dd9a7e086" LastKnownName="Worker" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseAssociationConnector edgePoints="[(1.5 : 3.69886363636364); (3.29224964943397 : 3.33226711716123)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="49372e41-bdbc-4a40-a4af-f6e1d8535138" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d9a04e42-65dc-4740-99b3-c7014254050d" />
+        <useCaseShapeMoniker Id="a933da17-7d75-422f-890f-bd7b0b3ef5eb" />
+      </nodes>
+    </useCaseAssociationConnector>
+    <useCaseAssociationConnector edgePoints="[(1.5 : 3.78977272727273); (3.2764271340717 : 4.07238613496595)]" fixedFrom="Algorithm" fixedTo="Algorithm" customColor="113, 111, 110" sourceMultiplicity="" targetMultiplicity="">
+      <associationMoniker Id="5c2a607b-5745-47ed-9439-34aa934dc0da" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="d9a04e42-65dc-4740-99b3-c7014254050d" />
+        <useCaseShapeMoniker Id="6222e61a-679f-455f-a791-1882ba41d1f2" />
+      </nodes>
+    </useCaseAssociationConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

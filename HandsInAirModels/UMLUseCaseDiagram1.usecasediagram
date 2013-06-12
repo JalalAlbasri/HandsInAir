@@ -1,0 +1,115 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="4d30c338-47d2-4a05-b65e-620fb6ab57d4" name="UMLUseCaseDiagram1" linkedPackageId="b57b5fff-0f2c-4221-ad81-2495d2c7d513" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="de240c5f-36d8-4aab-8940-176c3fdde34c">
+      <profileInstance Id="d1210613-50da-4452-b8b2-ca1bd09acd54" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="fc678bad-1496-488b-a935-86851af9eaeb">
+      <profileInstance Id="59d20388-a8aa-41de-8474-86ee1804e088" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="47071072-d8b2-494a-a7c1-0222b45c5908" name="Helper" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="7e2aec70-f633-42a4-ab5c-e8222bab71b9" />
+        <targetEnds>
+          <association Id="6889aca6-5bb1-4b38-be1b-ae4580640290" isDerived="false" sourceEndRoleName="Helper" targetEndRoleName="Instruct Partner by performing Hand Gestures in Shared Workspace" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="8565e298-c1d6-4f5e-ad3a-b3d5103456dd" LastKnownName="Instruct Partner by performing Hand Gestures in Shared Workspace" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5894641-c4ca-4730-8856-46b255cc4dce" name="Helper" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cf9fcedb-9379-4b14-af83-e528d0172d63" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="1595b170-5c37-4f42-af39-75de4da06308" name="Instruct Partner by performing Hand Gestures in Shared Workspace" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a3b214ea-71c9-4632-a308-df2b769c1f02" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9578a1f8-37e7-4c44-8683-86cbeb92f7de" />
+          </association>
+          <association Id="cdaa5457-ac07-4279-8d34-c6a0954a889f" isDerived="false" sourceEndRoleName="Helper" targetEndRoleName="Communicate Verbally with Partner" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e239d37a-2d75-4e3c-9eeb-3307da3bd5fa" LastKnownName="Communicate Verbally with Partner" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="da1230ff-6204-41e2-ad95-6910dba331bd" name="Helper" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3c3181cf-114a-4f0f-b53e-70d88840d991" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e7eac603-3951-4f6e-affb-eb30dd5f4589" name="Communicate Verbally with Partner" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9b85548d-2d32-4c34-b4db-6ac50b25e795" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="85c3a7e4-e9b9-4e7a-8c91-a70344f965a7" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="8565e298-c1d6-4f5e-ad3a-b3d5103456dd" name="Instruct Partner by performing Hand Gestures in Shared Workspace" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="6dee6ef1-aabd-42c1-b1c9-450f2b4abdf3" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="e239d37a-2d75-4e3c-9eeb-3307da3bd5fa" name="Communicate Verbally with Partner" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="f91d48d8-d4c6-4679-afb5-21185b7b5983" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="7ad2db61-2d9f-4b45-bdcf-5a74bd7a0314" name="Capture Worksite with Helmer Mounted Camera" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="bb1b5784-60de-4d11-8d72-d21d9c2423b4" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <actor Id="060967bb-c45b-422a-a061-db8dd9a7e086" name="Worker" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="89511ef1-da14-43be-a1e3-c0c54674304a" />
+        <targetEnds>
+          <association Id="49372e41-bdbc-4a40-a4af-f6e1d8535138" isDerived="false" sourceEndRoleName="Worker" targetEndRoleName="Communicate Verbally with Partner" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="e239d37a-2d75-4e3c-9eeb-3307da3bd5fa" LastKnownName="Communicate Verbally with Partner" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5119ddbb-7512-41ee-a7b8-920b71acac42" name="Worker" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c426e09b-39d7-4683-885e-8dddf38150f1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="be4e61c6-c335-43a7-948a-8c3b7cbf85b0" name="Communicate Verbally with Partner" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="9a9616f7-d434-401a-878c-1a1233fadbd6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="1e933890-d129-4b15-be44-ca8227a9cf8c" />
+          </association>
+          <association Id="5c2a607b-5745-47ed-9439-34aa934dc0da" isDerived="false" sourceEndRoleName="Worker" targetEndRoleName="Capture Worksite with Helmer Mounted Camera" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="7ad2db61-2d9f-4b45-bdcf-5a74bd7a0314" LastKnownName="Capture Worksite with Helmer Mounted Camera" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="cc8df905-0dda-4768-b91d-07571b536d26" name="Worker" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="3ffce91a-f227-4891-bfb3-5921ed6f4c55" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="d8f32fe8-ced2-4389-853f-1c9392e7fdeb" name="Capture Worksite with Helmer Mounted Camera" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="a52c9dea-4198-44a8-bead-12d4b8c83cf0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="963b4f45-4ba5-4c14-920b-92bb5d5d5392" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="b57b5fff-0f2c-4221-ad81-2495d2c7d513" name="HandsInAirModels">
+    <elementDefinition Id="a631cdfb-0dc3-4a3a-aa88-7ab2394024cd" />
+  </package>
+</useCaseModelRoot>

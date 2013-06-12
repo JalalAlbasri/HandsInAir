@@ -1,0 +1,1034 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel"
+  dslVersion="1.0.0.0"
+  Id="a631cdfb-0dc3-4a3a-aa88-7ab2394024cd"
+  name="HandsInAirModels" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <activity
+        Id="cb3b6658-92b9-488d-9272-a5f44b3d3c31"
+        name="HelperUMLActivityDiagram"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="6d77e85b-ec45-44ac-92fb-e9b29106e3c0"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="46aa349d-cc3c-4ec6-8b19-435968ca4fdc"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="7f30061b-7a49-4db4-b50c-cf477abdc14b"
+                  LastKnownName="Fork2"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="6c19913c-d448-474f-9dab-69f7002d1171"
+            name="Open Send Socket"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c586f35e-2385-4bf8-9cef-26420d624772"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="a7dcacb3-f877-45ae-8ad7-9e050aaaa86e"
+                  LastKnownName="Accept Connect Request"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="a7dcacb3-f877-45ae-8ad7-9e050aaaa86e"
+            name="Accept Connect Request"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="695c7680-f44b-42da-85ae-01ea0f5ed976"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="d976a50b-d740-4e9a-978c-d264a5e93c2a"
+                  LastKnownName="Wait for SEND Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="301b83ec-d52d-41d3-a610-cd7a88b904c6"
+            name="Send Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4796809f-cb71-4219-b865-9a894f13dea8"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="8b1d0941-bca5-4243-a80c-aaa495351111"
+                  LastKnownName="Reset SEND Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="cb7676d1-d663-4eb5-9a3d-3cfd1c7d24c1"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <acceptEventAction
+            Id="d976a50b-d740-4e9a-978c-d264a5e93c2a"
+            name="Wait for SEND Event"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="01d1ca3a-84ae-43d7-91ee-88e029882d7d"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="301b83ec-d52d-41d3-a610-cd7a88b904c6"
+                  LastKnownName="Send Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <forkNode
+            Id="7f30061b-7a49-4db4-b50c-cf477abdc14b"
+            name="Fork2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="58229a18-46b7-413c-bea4-7242f3d8efdd"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="90f05d3f-382a-4dbc-b7c8-332b65f47120"
+                  LastKnownName="QUIT Signal Received "
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="05c9cf26-411e-4db5-9359-10be8bec9905"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6c19913c-d448-474f-9dab-69f7002d1171"
+                  LastKnownName="Open Send Socket"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="87178d4b-b9da-4067-9792-e04a4fcbcadc"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="37cc7a60-b9a6-4a39-a7be-de0aee2a064d"
+                  LastKnownName="Open Receive Socket"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="2b019858-a94c-4e6e-9498-0d0c6e58873a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="168c126c-b852-43e2-b740-d49ba25ff266"
+                  LastKnownName="Grab Frame from Camera"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="928e4067-c6cf-4e03-8dbc-6e0c314ede8f"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="7e02f739-97e3-461c-9ceb-9c4ffcdf112b"
+                  LastKnownName="Wait for DISPLAY Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <acceptEventAction
+            Id="90f05d3f-382a-4dbc-b7c8-332b65f47120"
+            name="QUIT Signal Received "
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="455f27d5-e063-4246-a979-f70a3d19930b"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="cb7676d1-d663-4eb5-9a3d-3cfd1c7d24c1"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <sendSignalAction
+            Id="8b1d0941-bca5-4243-a80c-aaa495351111"
+            name="Reset SEND Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="5a604c88-7bca-4d29-ba8e-865a26e06b89"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="d976a50b-d740-4e9a-978c-d264a5e93c2a"
+                  LastKnownName="Wait for SEND Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <opaqueAction
+            Id="37cc7a60-b9a6-4a39-a7be-de0aee2a064d"
+            name="Open Receive Socket"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="47413f6b-fc25-4e4f-b7b3-12ed166621e5"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="41e04c3d-f63f-4a79-8422-1a16e59b6604"
+                  LastKnownName="Attempt Connect"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="41e04c3d-f63f-4a79-8422-1a16e59b6604"
+            name="Attempt Connect"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="28e806e4-b6fa-4bd4-92c6-798844fa14ff"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="091a1dc6-df94-4815-98aa-5c42c51d6f13"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="091a1dc6-df94-4815-98aa-5c42c51d6f13"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0f4ab015-b43b-4ad5-aa73-bb1328ef06d5"
+                guard="Connection Successful"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f56d8494-976c-41ed-911c-9b937b34e850"
+                  LastKnownName="Receive Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+                <description>Connection Successful</description>
+              </controlFlow>
+              <controlFlow
+                Id="f58210d5-3bda-43e1-b9fb-9514ba76a26a"
+                guard="Connection Unsuccessful"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="41e04c3d-f63f-4a79-8422-1a16e59b6604"
+                  LastKnownName="Attempt Connect"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="f56d8494-976c-41ed-911c-9b937b34e850"
+            name="Receive Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="df04bfd7-c0c4-47bc-8c83-480830346b38"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="07f3533c-3f5f-407a-ac91-d006e5d30f0c"
+                  LastKnownName="Save Frame in Display Buffer"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="07f3533c-3f5f-407a-ac91-d006e5d30f0c"
+            name="Save Frame in Display Buffer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="841f89c1-0cd0-49c0-876f-9296bf8e2ccc"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="0f3e583d-5d55-4d69-9fcf-fa8e2fb9dcb9"
+                  LastKnownName="Set DISPLAY Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction
+            Id="0f3e583d-5d55-4d69-9fcf-fa8e2fb9dcb9"
+            name="Set DISPLAY Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d93018fd-4290-4450-9fba-aa9b2f88e1c7"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f56d8494-976c-41ed-911c-9b937b34e850"
+                  LastKnownName="Receive Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <opaqueAction
+            Id="168c126c-b852-43e2-b740-d49ba25ff266"
+            name="Grab Frame from Camera"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="ec282d4e-aefe-41fa-9e3f-4e9743dd138e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="6e300f68-d064-4d01-a523-88d8e16270eb"
+                  LastKnownName="Compress Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="6e300f68-d064-4d01-a523-88d8e16270eb"
+            name="Compress Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="6f078972-34d0-44c1-821b-883fe0c4d284"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2a7d2b0c-cbb3-4ec4-bc2f-72fd9aa6a8cd"
+                  LastKnownName="Save in Send Buffer"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="2a7d2b0c-cbb3-4ec4-bc2f-72fd9aa6a8cd"
+            name="Save in Send Buffer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2698500a-3f6c-4a6b-a646-a38966576536"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="ebff21ac-887a-4809-bce9-3985ec4c903c"
+                  LastKnownName="Set Send Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction
+            Id="ebff21ac-887a-4809-bce9-3985ec4c903c"
+            name="Set Send Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c9b51ce4-8335-4fd8-8d2e-5469e6d356ec"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="168c126c-b852-43e2-b740-d49ba25ff266"
+                  LastKnownName="Grab Frame from Camera"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <acceptEventAction
+            Id="7e02f739-97e3-461c-9ceb-9c4ffcdf112b"
+            name="Wait for DISPLAY Event"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4d8143a0-7384-4818-bdca-cc00958a8779"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="7b330fc8-e312-44c1-ac93-5e2652892035"
+                  LastKnownName="Decompress Frame from Display Buffer"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <opaqueAction
+            Id="7b330fc8-e312-44c1-ac93-5e2652892035"
+            name="Decompress Frame from Display Buffer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2c20d4a9-3edd-4000-b0ed-89259d52ec6a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="2b93c5fc-48d5-449e-8ff9-b4766e769bc4"
+                  LastKnownName="Display Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="2b93c5fc-48d5-449e-8ff9-b4766e769bc4"
+            name="Display Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4d568d50-c2b3-4488-880c-695967f618ce"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="ea8fb329-70f6-4aca-8286-9929b3393f18"
+                  LastKnownName="Reset Display Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction
+            Id="ea8fb329-70f6-4aca-8286-9929b3393f18"
+            name="Reset Display Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f0ebd2eb-9cde-48b6-9a1c-2c1c48177fab"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="7e02f739-97e3-461c-9ceb-9c4ffcdf112b"
+                  LastKnownName="Wait for DISPLAY Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="310c7fc2-d205-423a-9abf-f3b309edbd56"
+        name="WorkerUMLActivityDiagram1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="7f1e8640-7579-40b6-a815-b076c7f5e9f2"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bb5c6d0d-d9ed-4bfd-bea3-4079358f6fe9"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="16a942b0-e03a-4de9-898b-7c40c0fd9500"
+                  LastKnownName="Fork2"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction
+            Id="b0d78376-f68e-4922-88df-21ed478a8d68"
+            name="Open Send Socket"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="63ff8891-99b1-4546-bc18-c8e28c4face9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="01573144-a0b5-4cc4-8c84-aa33f02556dc"
+                  LastKnownName="Accept Connect Request"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="01573144-a0b5-4cc4-8c84-aa33f02556dc"
+            name="Accept Connect Request"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="64993f4b-3ca4-487f-bc4a-fcbcb040da6a"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="9264c752-d139-4226-942d-097982678599"
+                  LastKnownName="Wait for SEND Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="0a969066-ea4d-45f5-a440-b00a17fd21aa"
+            name="Send Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="63d9f57e-4d8c-4e8e-ba3f-b2cdb93068ab"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="a4ba0df5-2741-45d6-a32b-e82dfeb28d58"
+                  LastKnownName="Reset SEND Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="5ec8a2b5-f4ab-4e9c-9abe-71026bc24c42"
+            name="ActivityFinal1"
+            isLeaf="false" />
+          <acceptEventAction
+            Id="9264c752-d139-4226-942d-097982678599"
+            name="Wait for SEND Event"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="cd7b5c31-2c00-454c-8d90-08ae506d568e"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0a969066-ea4d-45f5-a440-b00a17fd21aa"
+                  LastKnownName="Send Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <forkNode
+            Id="16a942b0-e03a-4de9-898b-7c40c0fd9500"
+            name="Fork2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="d5772a28-e316-4140-9cae-b5377a76afd6"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="de0c8e03-248d-453e-b89a-14ba15e805f9"
+                  LastKnownName="QUIT Signal Received "
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="ea73fd10-99d7-4667-8347-179644b218d3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b0d78376-f68e-4922-88df-21ed478a8d68"
+                  LastKnownName="Open Send Socket"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="a1e0fcd8-eb0c-4adf-83a0-afe5fcb779cb"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="0cb019d5-4b70-4659-a766-83b2f70d3bc8"
+                  LastKnownName="Open Receive Socket"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="990b6d2c-cac5-496f-b7e6-bd96578253e9"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="7bd3f4cb-31f8-41c1-a3a1-4c7dbe474685"
+                  LastKnownName="Wait for PROCESS Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <acceptEventAction
+            Id="de0c8e03-248d-453e-b89a-14ba15e805f9"
+            name="QUIT Signal Received "
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="dced16e9-a850-4f52-86a5-3bf998bc6446"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="5ec8a2b5-f4ab-4e9c-9abe-71026bc24c42"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <sendSignalAction
+            Id="a4ba0df5-2741-45d6-a32b-e82dfeb28d58"
+            name="Reset SEND Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="2ba6679b-0cab-40f2-9e4b-ebd768d2e3dd"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="9264c752-d139-4226-942d-097982678599"
+                  LastKnownName="Wait for SEND Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <opaqueAction
+            Id="0cb019d5-4b70-4659-a766-83b2f70d3bc8"
+            name="Open Receive Socket"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bc216df4-9e76-423d-a9b2-b2aa990ee532"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c5b249be-1660-4dbb-9e4f-d2b298849df8"
+                  LastKnownName="Attempt Connect"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="c5b249be-1660-4dbb-9e4f-d2b298849df8"
+            name="Attempt Connect"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="675f7378-3999-4110-8dc2-31dec54eeac8"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="90d3ba7d-cb7d-42ad-a3b0-b0800d138758"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode
+            Id="90d3ba7d-cb7d-42ad-a3b0-b0800d138758"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9bba13ac-2bf5-4cbe-9568-7bf85a4fcf1e"
+                guard="Connection Successful"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="87ab0cc7-475d-4eec-8632-fe9872d63712"
+                  LastKnownName="Receive Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+                <description>Connection Successful</description>
+              </controlFlow>
+              <controlFlow
+                Id="e8c41860-689a-4017-a43e-4e59410d8440"
+                guard="Connection Unsuccessful"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="c5b249be-1660-4dbb-9e4f-d2b298849df8"
+                  LastKnownName="Attempt Connect"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="87ab0cc7-475d-4eec-8632-fe9872d63712"
+            name="Receive Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="f46530ff-7278-4cf7-8a20-22658ec9e978"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8a6e8c91-bcdd-420c-a3f4-9368d86f2284"
+                  LastKnownName="Save Frame in Display Buffer"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8a6e8c91-bcdd-420c-a3f4-9368d86f2284"
+            name="Save Frame in Display Buffer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="3fa379d1-2e15-4c66-83e0-e772b1bf5526"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="a709f06b-a95d-408f-aeff-375fc0c49e51"
+                  LastKnownName="Set PROCESS Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction
+            Id="a709f06b-a95d-408f-aeff-375fc0c49e51"
+            name="Set PROCESS Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="71858ce4-fea6-4455-8f5c-88cdeb3dd1ee"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="87ab0cc7-475d-4eec-8632-fe9872d63712"
+                  LastKnownName="Receive Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <acceptEventAction
+            Id="7bd3f4cb-31f8-41c1-a3a1-4c7dbe474685"
+            name="Wait for PROCESS Event"
+            isLeaf="false"
+            isUnmarshall="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="de19b65a-ebd5-42ee-b0c2-26dd17a63421"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8720ea4c-dd30-4dca-8950-c8bc737a0637"
+                  LastKnownName="Decompress Frame from Display Buffer"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <opaqueAction
+            Id="8720ea4c-dd30-4dca-8950-c8bc737a0637"
+            name="Decompress Frame from Display Buffer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="238c4096-36fe-4c0c-8b29-5648edd1b4e0"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="66e1de45-570e-4e23-83f1-c3ba0919e30f"
+                  LastKnownName="Grab Frame from Local Camera"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="66e1de45-570e-4e23-83f1-c3ba0919e30f"
+            name="Grab Frame from Local Camera"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="25f4d67f-e7bc-4596-8aa6-b828e552a153"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="cc1ebe0e-86e8-45d4-8af9-10e4eebb85e8"
+                  LastKnownName="Extract Hands from Local Camera Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="cc1ebe0e-86e8-45d4-8af9-10e4eebb85e8"
+            name="Extract Hands from Local Camera Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="4e86b869-1fd3-4060-ad62-29e7a411a3b3"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="8de4d269-1baa-4041-b7a8-a4beaf5f70e2"
+                  LastKnownName="Combine Hands and Received Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="8de4d269-1baa-4041-b7a8-a4beaf5f70e2"
+            name="Combine Hands and Received Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="0fd93113-85f1-4471-92e6-505d390e8e7a"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="e3074bb9-c066-4510-ac16-cea62cd7e9e5"
+                  LastKnownName="Compress Combined Frame"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="bba121bb-942c-4f88-a55c-c810124783e3"
+            name="Save Combined Frame in Send Buffer"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="bb26ba3e-92a1-46b0-9403-da7bf061082f"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="2de37666-2ce8-4e58-90b6-13de74a098f3"
+                  LastKnownName="Set SEND Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="e3074bb9-c066-4510-ac16-cea62cd7e9e5"
+            name="Compress Combined Frame"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7e13e840-240d-4f13-8573-50e6c897df4c"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="bba121bb-942c-4f88-a55c-c810124783e3"
+                  LastKnownName="Save Combined Frame in Send Buffer"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction
+            Id="2de37666-2ce8-4e58-90b6-13de74a098f3"
+            name="Set SEND Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="68dac84b-75d9-40b0-950a-3913b10e735e"
+                isLeaf="false">
+                <sendSignalActionMoniker
+                  Id="b32888fd-2e20-43b1-bfa9-26996c3fcbe9"
+                  LastKnownName="Reset PROCESS Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <sendSignalAction
+            Id="b32888fd-2e20-43b1-bfa9-26996c3fcbe9"
+            name="Reset PROCESS Event"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="c12128c2-87e0-4b8f-a565-2af129bb7dcc"
+                isLeaf="false">
+                <acceptEventActionMoniker
+                  Id="7bd3f4cb-31f8-41c1-a3a1-4c7dbe474685"
+                  LastKnownName="Wait for PROCESS Event"
+                  LastKnownLocation="HandsInAirModels.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="7e2aec70-f633-42a4-ab5c-e8222bab71b9"
+        name="Helper"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="9578a1f8-37e7-4c44-8683-86cbeb92f7de"
+            isDerived="false"
+            sourceEndRoleName="Helper"
+            targetEndRoleName="Instruct Partner by performing Hand Gestures in Shared Workspace"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="6dee6ef1-aabd-42c1-b1c9-450f2b4abdf3"
+              LastKnownName="Instruct Partner by performing Hand Gestures in Shared Workspace"
+              LastKnownLocation="HandsInAirModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cf9fcedb-9379-4b14-af83-e528d0172d63"
+                  name="Helper"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a3b214ea-71c9-4632-a308-df2b769c1f02"
+                  name="Instruct Partner by performing Hand Gestures in Shared Workspace"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="85c3a7e4-e9b9-4e7a-8c91-a70344f965a7"
+            isDerived="false"
+            sourceEndRoleName="Helper"
+            targetEndRoleName="Communicate Verbally with Partner"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f91d48d8-d4c6-4679-afb5-21185b7b5983"
+              LastKnownName="Communicate Verbally with Partner"
+              LastKnownLocation="HandsInAirModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3c3181cf-114a-4f0f-b53e-70d88840d991"
+                  name="Helper"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9b85548d-2d32-4c34-b4db-6ac50b25e795"
+                  name="Communicate Verbally with Partner"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="6dee6ef1-aabd-42c1-b1c9-450f2b4abdf3"
+        name="Instruct Partner by performing Hand Gestures in Shared Workspace"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="f91d48d8-d4c6-4679-afb5-21185b7b5983"
+        name="Communicate Verbally with Partner"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="bb1b5784-60de-4d11-8d72-d21d9c2423b4"
+        name="Capture Worksite with Helmer Mounted Camera"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="89511ef1-da14-43be-a1e3-c0c54674304a"
+        name="Worker"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="1e933890-d129-4b15-be44-ca8227a9cf8c"
+            isDerived="false"
+            sourceEndRoleName="Worker"
+            targetEndRoleName="Communicate Verbally with Partner"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="f91d48d8-d4c6-4679-afb5-21185b7b5983"
+              LastKnownName="Communicate Verbally with Partner"
+              LastKnownLocation="HandsInAirModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c426e09b-39d7-4683-885e-8dddf38150f1"
+                  name="Worker"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9a9616f7-d434-401a-878c-1a1233fadbd6"
+                  name="Communicate Verbally with Partner"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="963b4f45-4ba5-4c14-920b-92bb5d5d5392"
+            isDerived="false"
+            sourceEndRoleName="Worker"
+            targetEndRoleName="Capture Worksite with Helmer Mounted Camera"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="bb1b5784-60de-4d11-8d72-d21d9c2423b4"
+              LastKnownName="Capture Worksite with Helmer Mounted Camera"
+              LastKnownLocation="HandsInAirModels.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3ffce91a-f227-4891-bfb3-5921ed6f4c55"
+                  name="Worker"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a52c9dea-4198-44a8-bead-12d4b8c83cf0"
+                  name="Capture Worksite with Helmer Mounted Camera"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

@@ -1,0 +1,251 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="9782af83-f16c-4092-aeef-4d1db21c7379" name="HelperUMLActivityDiagram" linkedPackageId="cd901c57-628a-4e1d-a556-29396d9bea68" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="c4ce24b3-3819-40f8-ae77-d3a875b46726" name="HelperUMLActivityDiagram" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="cb3b6658-92b9-488d-9272-a5f44b3d3c31" />
+        <nodes>
+          <initialNode Id="d2c96947-b14c-425c-bbb8-e1a3f7272f9a" name="Initial1" isLeaf="false">
+            <elementDefinition Id="6d77e85b-ec45-44ac-92fb-e9b29106e3c0" />
+            <flowNodeTargets>
+              <controlFlow Id="230f3033-c84d-4148-b502-ab05a63c63b2" isLeaf="false">
+                <forkNodeMoniker Id="061f6233-c8b9-460b-bb57-387927754303" LastKnownName="Fork2" />
+                <elementDefinition Id="46aa349d-cc3c-4ec6-8b19-435968ca4fdc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <opaqueAction Id="5d681d7d-3c3a-4eef-b31d-8cbaf37dc671" name="Open Send Socket" isLeaf="false">
+            <elementDefinition Id="6c19913c-d448-474f-9dab-69f7002d1171" />
+            <flowNodeTargets>
+              <controlFlow Id="a5520458-6fe8-4e3a-9f16-1f2499223300" isLeaf="false">
+                <opaqueActionMoniker Id="fa159ce6-1a71-4448-b236-8a15be7fc790" LastKnownName="Accept Connect Request" />
+                <elementDefinition Id="c586f35e-2385-4bf8-9cef-26420d624772" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="fa159ce6-1a71-4448-b236-8a15be7fc790" name="Accept Connect Request" isLeaf="false">
+            <elementDefinition Id="a7dcacb3-f877-45ae-8ad7-9e050aaaa86e" />
+            <flowNodeTargets>
+              <controlFlow Id="1bbdcbd7-06c6-41e3-a33e-93763f44f418" isLeaf="false">
+                <acceptEventActionMoniker Id="8cee56ad-7ba6-46bd-83fd-c57a141eae9a" LastKnownName="Wait for SEND Event" />
+                <elementDefinition Id="695c7680-f44b-42da-85ae-01ea0f5ed976" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="70f0b7b4-12b8-4fac-be98-7923434266a1" name="Send Frame" isLeaf="false">
+            <elementDefinition Id="301b83ec-d52d-41d3-a610-cd7a88b904c6" />
+            <flowNodeTargets>
+              <controlFlow Id="1311ca17-549a-4667-ac09-772ab70d063a" isLeaf="false">
+                <sendSignalActionMoniker Id="f6f7b8ca-f87f-4e5f-a610-1f45473943fd" LastKnownName="Reset SEND Event" />
+                <elementDefinition Id="4796809f-cb71-4219-b865-9a894f13dea8" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="e1f91bc3-9fae-4173-90b8-6cfbe5455e50" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="cb7676d1-d663-4eb5-9a3d-3cfd1c7d24c1" />
+          </activityFinalNode>
+          <acceptEventAction Id="8cee56ad-7ba6-46bd-83fd-c57a141eae9a" name="Wait for SEND Event" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="d976a50b-d740-4e9a-978c-d264a5e93c2a" />
+            <flowNodeTargets>
+              <controlFlow Id="1f817235-d64b-4156-b779-8e0298a2c226" isLeaf="false">
+                <opaqueActionMoniker Id="70f0b7b4-12b8-4fac-be98-7923434266a1" LastKnownName="Send Frame" />
+                <elementDefinition Id="01d1ca3a-84ae-43d7-91ee-88e029882d7d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <forkNode Id="061f6233-c8b9-460b-bb57-387927754303" name="Fork2" isLeaf="false">
+            <elementDefinition Id="7f30061b-7a49-4db4-b50c-cf477abdc14b" />
+            <flowNodeTargets>
+              <controlFlow Id="290764b6-f54d-46f7-bfd6-04d59b70696d" isLeaf="false">
+                <acceptEventActionMoniker Id="dccb9dd0-b9ff-447e-90d4-8ba4c9c1a288" LastKnownName="QUIT Signal Received " />
+                <elementDefinition Id="58229a18-46b7-413c-bea4-7242f3d8efdd" />
+              </controlFlow>
+              <controlFlow Id="6031e1db-e17d-417c-874d-81057d541778" isLeaf="false">
+                <opaqueActionMoniker Id="5d681d7d-3c3a-4eef-b31d-8cbaf37dc671" LastKnownName="Open Send Socket" />
+                <elementDefinition Id="05c9cf26-411e-4db5-9359-10be8bec9905" />
+              </controlFlow>
+              <controlFlow Id="4b96f4c3-af7a-4772-9e88-50a19b05641c" isLeaf="false">
+                <opaqueActionMoniker Id="664d4814-01ff-43a7-a099-84b26a857b97" LastKnownName="Open Receive Socket" />
+                <elementDefinition Id="87178d4b-b9da-4067-9792-e04a4fcbcadc" />
+              </controlFlow>
+              <controlFlow Id="8a1ad99a-c917-423f-9466-cc3681f3b41a" isLeaf="false">
+                <opaqueActionMoniker Id="3378e7df-3405-4c26-96fb-c75253cb6dd3" LastKnownName="Grab Frame from Camera" />
+                <elementDefinition Id="2b019858-a94c-4e6e-9498-0d0c6e58873a" />
+              </controlFlow>
+              <controlFlow Id="abd819f8-97b3-4cda-b153-b64d7bb03d48" isLeaf="false">
+                <acceptEventActionMoniker Id="7f8b68c7-eed1-4e6e-b28a-c74ffca68ba8" LastKnownName="Wait for DISPLAY Event" />
+                <elementDefinition Id="928e4067-c6cf-4e03-8dbc-6e0c314ede8f" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <acceptEventAction Id="dccb9dd0-b9ff-447e-90d4-8ba4c9c1a288" name="QUIT Signal Received " isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="90f05d3f-382a-4dbc-b7c8-332b65f47120" />
+            <flowNodeTargets>
+              <controlFlow Id="3b613323-8f42-4108-be00-a6825a5f518a" isLeaf="false">
+                <activityFinalNodeMoniker Id="e1f91bc3-9fae-4173-90b8-6cfbe5455e50" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="455f27d5-e063-4246-a979-f70a3d19930b" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <sendSignalAction Id="f6f7b8ca-f87f-4e5f-a610-1f45473943fd" name="Reset SEND Event" isLeaf="false">
+            <elementDefinition Id="8b1d0941-bca5-4243-a80c-aaa495351111" />
+            <flowNodeTargets>
+              <controlFlow Id="34a8986a-c635-469e-b143-660e7d0c1828" isLeaf="false">
+                <acceptEventActionMoniker Id="8cee56ad-7ba6-46bd-83fd-c57a141eae9a" LastKnownName="Wait for SEND Event" />
+                <elementDefinition Id="5a604c88-7bca-4d29-ba8e-865a26e06b89" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <opaqueAction Id="664d4814-01ff-43a7-a099-84b26a857b97" name="Open Receive Socket" isLeaf="false">
+            <elementDefinition Id="37cc7a60-b9a6-4a39-a7be-de0aee2a064d" />
+            <flowNodeTargets>
+              <controlFlow Id="a4d021db-5f17-495d-bae9-95a6c660e226" isLeaf="false">
+                <opaqueActionMoniker Id="ce47ba2b-e5b4-4a84-b7dc-6c94e4e11a7f" LastKnownName="Attempt Connect" />
+                <elementDefinition Id="47413f6b-fc25-4e4f-b7b3-12ed166621e5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="ce47ba2b-e5b4-4a84-b7dc-6c94e4e11a7f" name="Attempt Connect" isLeaf="false">
+            <elementDefinition Id="41e04c3d-f63f-4a79-8422-1a16e59b6604" />
+            <flowNodeTargets>
+              <controlFlow Id="afc9f383-04bd-47a2-bdde-67e9bc5764fd" isLeaf="false">
+                <decisionNodeMoniker Id="20906f1a-8023-4c46-b502-a7fb3a96a919" LastKnownName="Decision1" />
+                <elementDefinition Id="28e806e4-b6fa-4bd4-92c6-798844fa14ff" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <decisionNode Id="20906f1a-8023-4c46-b502-a7fb3a96a919" name="Decision1" isLeaf="false">
+            <elementDefinition Id="091a1dc6-df94-4815-98aa-5c42c51d6f13" />
+            <flowNodeTargets>
+              <controlFlow Id="b3bc96bd-9288-4247-bc40-9d5427a9fb08" guard="Connection Successful" isLeaf="false">
+                <opaqueActionMoniker Id="e30a1227-fe91-48b1-a32e-d5795d623da2" LastKnownName="Receive Frame" />
+                <description>Connection Successful</description>
+                <elementDefinition Id="0f4ab015-b43b-4ad5-aa73-bb1328ef06d5" />
+              </controlFlow>
+              <controlFlow Id="14b86cf7-6e84-40a9-8f14-f68a5cf60cbb" guard="Connection Unsuccessful" isLeaf="false">
+                <opaqueActionMoniker Id="ce47ba2b-e5b4-4a84-b7dc-6c94e4e11a7f" LastKnownName="Attempt Connect" />
+                <elementDefinition Id="f58210d5-3bda-43e1-b9fb-9514ba76a26a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="e30a1227-fe91-48b1-a32e-d5795d623da2" name="Receive Frame" isLeaf="false">
+            <elementDefinition Id="f56d8494-976c-41ed-911c-9b937b34e850" />
+            <flowNodeTargets>
+              <controlFlow Id="cd0e8203-507a-4fd4-ab57-657888fea596" isLeaf="false">
+                <opaqueActionMoniker Id="1f7822be-4ac5-4d0a-b077-4ac133e4189e" LastKnownName="Save Frame in Display Buffer" />
+                <elementDefinition Id="df04bfd7-c0c4-47bc-8c83-480830346b38" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="1f7822be-4ac5-4d0a-b077-4ac133e4189e" name="Save Frame in Display Buffer" isLeaf="false">
+            <elementDefinition Id="07f3533c-3f5f-407a-ac91-d006e5d30f0c" />
+            <flowNodeTargets>
+              <controlFlow Id="63c6ec42-f2a9-4a74-8db8-261771d8c7d6" isLeaf="false">
+                <sendSignalActionMoniker Id="1d15fbb5-e75f-4498-9070-4db9332f4f3a" LastKnownName="Set DISPLAY Event" />
+                <elementDefinition Id="841f89c1-0cd0-49c0-876f-9296bf8e2ccc" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction Id="1d15fbb5-e75f-4498-9070-4db9332f4f3a" name="Set DISPLAY Event" isLeaf="false">
+            <elementDefinition Id="0f3e583d-5d55-4d69-9fcf-fa8e2fb9dcb9" />
+            <flowNodeTargets>
+              <controlFlow Id="7d845d74-83eb-46b7-9853-2acc381401f3" isLeaf="false">
+                <opaqueActionMoniker Id="e30a1227-fe91-48b1-a32e-d5795d623da2" LastKnownName="Receive Frame" />
+                <elementDefinition Id="d93018fd-4290-4450-9fba-aa9b2f88e1c7" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <opaqueAction Id="3378e7df-3405-4c26-96fb-c75253cb6dd3" name="Grab Frame from Camera" isLeaf="false">
+            <elementDefinition Id="168c126c-b852-43e2-b740-d49ba25ff266" />
+            <flowNodeTargets>
+              <controlFlow Id="5149146e-452b-470e-b018-03fe4b3b3593" isLeaf="false">
+                <opaqueActionMoniker Id="4bd6f66a-f4e0-484f-b457-2e848435b0bf" LastKnownName="Compress Frame" />
+                <elementDefinition Id="ec282d4e-aefe-41fa-9e3f-4e9743dd138e" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="4bd6f66a-f4e0-484f-b457-2e848435b0bf" name="Compress Frame" isLeaf="false">
+            <elementDefinition Id="6e300f68-d064-4d01-a523-88d8e16270eb" />
+            <flowNodeTargets>
+              <controlFlow Id="d900c0e8-7f59-4684-b4a2-719d79c34b39" isLeaf="false">
+                <opaqueActionMoniker Id="66b1d3e0-bd3f-4522-9c1e-5a1635c68349" LastKnownName="Save in Send Buffer" />
+                <elementDefinition Id="6f078972-34d0-44c1-821b-883fe0c4d284" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="66b1d3e0-bd3f-4522-9c1e-5a1635c68349" name="Save in Send Buffer" isLeaf="false">
+            <elementDefinition Id="2a7d2b0c-cbb3-4ec4-bc2f-72fd9aa6a8cd" />
+            <flowNodeTargets>
+              <controlFlow Id="0078749a-adb5-4a26-86a4-04e515a7d63e" isLeaf="false">
+                <sendSignalActionMoniker Id="a35ea2eb-9914-4b7d-8b44-a18feddd0342" LastKnownName="Set Send Event" />
+                <elementDefinition Id="2698500a-3f6c-4a6b-a646-a38966576536" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction Id="a35ea2eb-9914-4b7d-8b44-a18feddd0342" name="Set Send Event" isLeaf="false">
+            <elementDefinition Id="ebff21ac-887a-4809-bce9-3985ec4c903c" />
+            <flowNodeTargets>
+              <controlFlow Id="415b3054-3c3c-41ba-ae6b-527a6ee53a29" isLeaf="false">
+                <opaqueActionMoniker Id="3378e7df-3405-4c26-96fb-c75253cb6dd3" LastKnownName="Grab Frame from Camera" />
+                <elementDefinition Id="c9b51ce4-8335-4fd8-8d2e-5469e6d356ec" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+          <acceptEventAction Id="7f8b68c7-eed1-4e6e-b28a-c74ffca68ba8" name="Wait for DISPLAY Event" isLeaf="false" isUnmarshall="false">
+            <elementDefinition Id="7e02f739-97e3-461c-9ceb-9c4ffcdf112b" />
+            <flowNodeTargets>
+              <controlFlow Id="6ef9771c-aed7-4a78-b769-59df1dff5d6e" isLeaf="false">
+                <opaqueActionMoniker Id="ee6fb06e-1bd8-4bd5-8e2b-48c3c8db4563" LastKnownName="Decompress Frame from Display Buffer" />
+                <elementDefinition Id="4d8143a0-7384-4818-bdca-cc00958a8779" />
+              </controlFlow>
+            </flowNodeTargets>
+          </acceptEventAction>
+          <opaqueAction Id="ee6fb06e-1bd8-4bd5-8e2b-48c3c8db4563" name="Decompress Frame from Display Buffer" isLeaf="false">
+            <elementDefinition Id="7b330fc8-e312-44c1-ac93-5e2652892035" />
+            <flowNodeTargets>
+              <controlFlow Id="bb9f318c-9d15-4907-8d48-ce89710544ab" isLeaf="false">
+                <opaqueActionMoniker Id="0e32ba4c-87cf-48f3-8500-c8afb900c51c" LastKnownName="Display Frame" />
+                <elementDefinition Id="2c20d4a9-3edd-4000-b0ed-89259d52ec6a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="0e32ba4c-87cf-48f3-8500-c8afb900c51c" name="Display Frame" isLeaf="false">
+            <elementDefinition Id="2b93c5fc-48d5-449e-8ff9-b4766e769bc4" />
+            <flowNodeTargets>
+              <controlFlow Id="2086665c-cb5a-4dd6-8f47-fc493ca3ab00" isLeaf="false">
+                <sendSignalActionMoniker Id="7d16763b-7f2d-4dc5-a0bf-d6f8f0b2c52a" LastKnownName="Reset Display Event" />
+                <elementDefinition Id="4d568d50-c2b3-4488-880c-695967f618ce" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <sendSignalAction Id="7d16763b-7f2d-4dc5-a0bf-d6f8f0b2c52a" name="Reset Display Event" isLeaf="false">
+            <elementDefinition Id="ea8fb329-70f6-4aca-8286-9929b3393f18" />
+            <flowNodeTargets>
+              <controlFlow Id="619ae7d0-9348-466e-981c-c45a4605558f" isLeaf="false">
+                <acceptEventActionMoniker Id="7f8b68c7-eed1-4e6e-b28a-c74ffca68ba8" LastKnownName="Wait for DISPLAY Event" />
+                <elementDefinition Id="f0ebd2eb-9cde-48b6-9a1c-2c1c48177fab" />
+              </controlFlow>
+            </flowNodeTargets>
+          </sendSignalAction>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="cd901c57-628a-4e1d-a556-29396d9bea68" name="HandsInAirModels">
+    <elementDefinition Id="a631cdfb-0dc3-4a3a-aa88-7ab2394024cd" />
+    <profileInstances>
+      <packageHasProfileInstances Id="346e4545-fa39-48ee-86f7-03ea1030c78d">
+        <profileInstance Id="7a913f43-b23b-4015-a921-ec00799a6e9a" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="928a47f1-a1e3-4382-8159-67d17cbb8fcd">
+        <profileInstance Id="e675ef7f-190a-4463-822a-3b86a363c4ac" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</activityRootModel>

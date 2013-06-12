@@ -1,0 +1,71 @@
+﻿Build started 26/03/2011 5:46:13 PM.
+     1>Project "C:\HandsInAir\HandsInAir\helper\helper.vcxproj" on node 2 (build target(s)).
+     1>InitializeBuildStatus:
+         Touching "Release\helper.unsuccessfulbuild".
+       ClCompile:
+         All outputs are up-to-date.
+         All outputs are up-to-date.
+       Link:
+         C:\Program Files\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\HandsInAir\HandsInAir\Release\helper.exe" /INCREMENTAL:NO /NOLOGO "C:\Documents and Settings\administrator\My Documents\lib\jpegsr8c\jpeg-8c\Release\jpeg.lib" C:\OpenCV2.2\lib\opencv_core220.lib C:\OpenCV2.2\lib\opencv_highgui220.lib C:\OpenCV2.2\lib\opencv_video220.lib C:\OpenCV2.2\lib\opencv_ml220.lib C:\OpenCV2.2\lib\opencv_legacy220.lib C:\OpenCV2.2\lib\opencv_imgproc220.lib C:\OpenCV2.2\lib\opencv_contrib220.lib ws2_32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB /MANIFEST /ManifestFile:"Release\helper.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"C:\HandsInAir\HandsInAir\Release\helper.pdb" /SUBSYSTEM:CONSOLE /OPT:REF /OPT:ICF /LTCG /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\HandsInAir\HandsInAir\Release\helper.lib" /MACHINE:X86 Release\helper.obj
+         Release\stdafx.obj
+     1>helper.obj : error LNK2001: unresolved external symbol @__security_check_cookie@4
+     1>helper.obj : error LNK2001: unresolved external symbol _memchr
+     1>helper.obj : error LNK2001: unresolved external symbol _free
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::exception::exception(char const * const &)" (??0exception@std@@QAE@ABQBD@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: virtual __thiscall std::exception::~exception(void)" (??1exception@std@@UAE@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "void __cdecl operator delete(void *)" (??3@YAXPAX@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "void __cdecl operator delete[](void *)" (??_V@YAXPAX@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol _memmove
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::_Lockit::_Lockit(int)" (??0_Lockit@std@@QAE@H@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::_Lockit::~_Lockit(void)" (??1_Lockit@std@@QAE@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: static void __cdecl std::_Locinfo::_Locinfo_ctor(class std::_Locinfo *,char const *)" (?_Locinfo_ctor@_Locinfo@std@@SAXPAV12@PBD@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "const type_info::`vftable'" (??_7type_info@@6B@)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::exception::exception(class std::exception const &)" (??0exception@std@@QAE@ABV01@@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: static void __cdecl std::_Locinfo::_Locinfo_dtor(class std::_Locinfo *)" (?_Locinfo_dtor@_Locinfo@std@@SAXPAV12@@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol __Getctype
+     1>helper.obj : error LNK2001: unresolved external symbol __Getcvt
+     1>helper.obj : error LNK2001: unresolved external symbol _localeconv
+     1>helper.obj : error LNK2001: unresolved external symbol "private: static int std::locale::id::_Id_cnt" (?_Id_cnt@id@locale@std@@0HA)
+     1>helper.obj : error LNK2001: unresolved external symbol "private: static void __cdecl std::locale::facet::_Facet_Register(class std::locale::facet *)" (?_Facet_Register@facet@locale@std@@CAXPAV123@@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "private: static class std::locale::_Locimp * __cdecl std::locale::_Init(void)" (?_Init@locale@std@@CAPAV_Locimp@12@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "private: static class std::locale::_Locimp * __cdecl std::locale::_Getgloballocale(void)" (?_Getgloballocale@locale@std@@CAPAV_Locimp@12@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "void * __cdecl operator new(unsigned int)" (??2@YAPAXI@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "void * __cdecl operator new[](unsigned int)" (??_U@YAPAXI@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol __Tolower
+     1>helper.obj : error LNK2001: unresolved external symbol __Toupper
+     1>helper.obj : error LNK2001: unresolved external symbol "class std::error_category const & __cdecl std::iostream_category(void)" (?iostream_category@std@@YAABVerror_category@1@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "private: static void __cdecl std::ios_base::_Ios_base_dtor(class std::ios_base *)" (?_Ios_base_dtor@ios_base@std@@CAXPAV12@@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "void __cdecl std::_Xout_of_range(char const *)" (?_Xout_of_range@std@@YAXPBD@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol _sprintf_s
+     1>helper.obj : error LNK2001: unresolved external symbol ___iob_func
+     1>helper.obj : error LNK2001: unresolved external symbol _fprintf
+     1>helper.obj : error LNK2001: unresolved external symbol _exit
+     1>helper.obj : error LNK2001: unresolved external symbol _atexit
+     1>helper.obj : error LNK2001: unresolved external symbol "class std::basic_ostream<char,struct std::char_traits<char> > std::cout" (?cout@std@@3V?$basic_ostream@DU?$char_traits@D@std@@@1@A)
+     1>helper.obj : error LNK2001: unresolved external symbol _perror
+     1>helper.obj : error LNK2001: unresolved external symbol "__int64 const std::_BADOFF" (?_BADOFF@std@@3_JB)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::_Mutex::~_Mutex(void)" (??1_Mutex@std@@QAE@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: void __thiscall std::_Mutex::_Lock(void)" (?_Lock@_Mutex@std@@QAEXXZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: void __thiscall std::_Mutex::_Unlock(void)" (?_Unlock@_Mutex@std@@QAEXXZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "bool __cdecl std::uncaught_exception(void)" (?uncaught_exception@std@@YA_NXZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: static void __cdecl std::ios_base::_Addstd(class std::ios_base *)" (?_Addstd@ios_base@std@@SAXPAV12@@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::_Mutex::_Mutex(void)" (??0_Mutex@std@@QAE@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "void __cdecl std::_Xlength_error(char const *)" (?_Xlength_error@std@@YAXPBD@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol _strcspn
+     1>helper.obj : error LNK2001: unresolved external symbol _memmove_s
+     1>helper.obj : error LNK2001: unresolved external symbol "public: static class std::locale::id std::ctype<char>::id" (?id@?$ctype@D@std@@2V0locale@2@A)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::bad_cast::bad_cast(char const *)" (??0bad_cast@std@@QAE@PBD@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: __thiscall std::bad_cast::bad_cast(class std::bad_cast const &)" (??0bad_cast@std@@QAE@ABV01@@Z)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: virtual __thiscall std::bad_cast::~bad_cast(void)" (??1bad_cast@std@@UAE@XZ)
+     1>helper.obj : error LNK2001: unresolved external symbol "public: virtual char const * __thiscall std::exception::what(void)const " (?what@exception@std@@UBEPBDXZ)
+     1>LINK : error LNK2001: unresolved external symbol _wmainCRTStartup
+     1>jpeg.lib(jerror.obj) : error LNK2001: unresolved external symbol __imp__sprintf
+     1>jpeg.lib(jmemmgr.obj) : error LNK2001: unresolved external symbol __imp__sscanf
+     1>jpeg.lib(jmemmgr.obj) : error LNK2001: unresolved external symbol __imp__getenv
+     1>jpeg.lib(jmemnobs.obj) : error LNK2001: unresolved external symbol __imp__malloc
+     1>C:\HandsInAir\HandsInAir\Release\helper.exe : fatal error LNK1120: 55 unresolved externals
+     1>Done Building Project "C:\HandsInAir\HandsInAir\helper\helper.vcxproj" (build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:02.10
